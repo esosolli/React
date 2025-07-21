@@ -4,11 +4,11 @@ function App() {
   const [count, setCount] = useState(0); // Initialize count state to 0
 
   const increment = () => {
-    setCount(count + 1); // Increment count
+    setCount{count + 1}; // Increment count
   };
 
   const decrement = () => {
-    setCount(count - 1); // Decrement count
+    setCount{count - 1}; // Decrement count
   };
 
   const reset = () => {
@@ -21,7 +21,7 @@ function App() {
      
       <button onClick={increment}>Increment</button>
       <button onClick={decrement}>Decrement</button>
-      <button onClick={reset}>Reset</button>
+      <button onClick= {reset} >Reset</button>
     </div>
   );
 }
