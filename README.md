@@ -17,11 +17,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Click Counter App</h1>
-
-      <button onClick=[()=setCount(count +1)]+ </button>
-      <button onClick=[()=setCount(count -1)]- </button>
-      <button onClick=[()=setCount(count(0)]Reset</button>
+      <h1>Click Counter</h1>
+     
+      <button onClick={+1}>+</button>
+      <button onClick={-1}>-</button>
+      <button onClick={reset}>Reset</button>
     </div>
   );
 }
