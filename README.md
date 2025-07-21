@@ -19,8 +19,8 @@ function App() {
     <div className="App">
       <h1>Click Counter App</h1>
      
-      <button onClick={+1}>+</button>
-      <button onClick={-1}>-</button>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
       <button onClick={reset}>Reset</button>
     </div>
   );
