@@ -1,33 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react'
+import {useEffect} from 'react'
+import {useState} from 'react'
 
-function App() {
-  const [count, setCount] = useState(0); // Initialize count state to 0
+function FetchData() {
+    const[records,setRecords]=useState([])
 
-  const increment = () => {
-setCount(count + 1); // Increment count
-  };
+    useEffect(() =>{
+        fectch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(data=> setRecords(data))
+        .catch(err=> console.log (err))
+    },[] )
+    return ( 
+        <div>
+            <ul>
+                {records.map((list, index)=> {
+                    <li key= {index}> {list.id} {list.name} </li>
+                 } ) }
+            </ul>
+        </div>
+         )
+  }
+  
 
-  const decrement = () => {
-    setCount(count - 1); // Decrement count
-  };
-
-  const reset = () => {
-   setCount(0);// Reset count to 0
-  };
-
-  return (
-    <div className="App">
-      <h1>Click Counter App</h1>
-
-      <button onClick={"() => setCount(count + 1)"}>Increment</button>
-
-      <button onClick={"() => setCount(count - 1)"}>Dncrement</button>
-
-      <button onClick={"() => setCount(0)"}>Reset</button>
-   
-      
-    </div>
-  );
-}
-
-export default App;
+export default FetchData;
