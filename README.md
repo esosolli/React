@@ -2,7 +2,7 @@ import React from 'react'
 import {useEffect} from 'react'
 import {useState} from 'react'
 
-function FetchData() {
+function fetchdata () {
     const[records,setRecords]=useState([])
 
     useEffect(() =>{
