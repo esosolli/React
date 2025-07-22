@@ -6,20 +6,22 @@ function Fetchdata () {
     const[records,setRecords]=useState([])
 
     useEffect(() =>{
-        fetch('https://jsonplaceholder.typicode.com/users')
+        awaits fetch("https://jsonplaceholder.typicode.com/users")
         .then(response => response.json())
         .then(data=> setRecords(data))
         .catch(err=> console.log (err))
-    },[] )
+    },
+if (! data.length) return <div> Loading...</div>
     return ( 
         <div>
             <ul>
-                {records.map((list, index)=> {
-                    <li key= {index}> {list.id} {list.name} </li>
-                 } ) }
+              <li> Name:{data[0].name}</li>
+               <li> Email:{data[0]. email}</li>
+               <li> Phone:{data[0].phone}</li>
+                <li>Address:{data[0].address.street}</li>
             </ul>
         </div>
-         )
-  }
+         );
+        }
   
 export default FetchData;
