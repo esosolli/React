@@ -2,11 +2,11 @@ import React from 'react'
 import {useEffect} from 'react'
 import {useState} from 'react'
 
-function fetchdata () {
+function Fetchdata () {
     const[records,setRecords]=useState([])
 
     useEffect(() =>{
-        fectch('https://jsonplaceholder.typicode.com/users')
+        fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
         .then(data=> setRecords(data))
         .catch(err=> console.log (err))
