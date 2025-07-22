@@ -1,12 +1,11 @@
-import React from 'react'
-import {useEffect} from 'react'
-import {useState} from 'react'
 
-function Fetchdata () {
+ import React, { useState, useEffect } from 'react';
+
+function DataFetcher () {
     const[records,setRecords]=useState([])
 
     useEffect(() =>{
-        'awaits', fetch("https://jsonplaceholder.typicode.com/users")
+        const response= await fetch ("https://jsonplaceholder.typicode.com/users")
         .then(response => response.json())
         .then(data=> setRecords(data))
         .catch(err=> console.log (err))
@@ -24,4 +23,4 @@ if (! data.length) return <div> Loading...</div>
          );
         }
   
-export default FetchData;
+export default DataFetcher;
