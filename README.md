@@ -14,9 +14,9 @@ if (! data.length) return <div> Loading...</div>
     return ( 
         <div>
             <ul>
-              <li> Name:{[Full name]}</li>
-               <li> Email:{[email address]}</li>
-               <li> Phone:{[phone number]}</li>
+              <li> Name:{[ Enter your name]}</li>
+               <li> Email:{[Enter your email address]}</li>
+               <li> Phone:{[Enter your phone number]}</li>
                 <li>Address:{[Enter your address]}</li>
             </ul>
         </div>
