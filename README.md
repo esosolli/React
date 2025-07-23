@@ -15,7 +15,7 @@ if (! data.length) return <div> Loading...</div>
         <div>
             <ul>
               <li> Name:{data[0].name}</li>
-               <li> Email:{data[0]. Email il}</li>
+               <li> Email:{data[0]. Email}</li>
                <li> Phone:{data[0].phone}</li>
                 <li>Address:{data[0].address.street}</li>
             </ul>
