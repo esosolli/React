@@ -14,10 +14,10 @@ if (! data.length) return <div> Loading...</div>
     return ( 
         <div>
             <ul>
-              <li> Name:{Full name].name}</li>
-               <li> Email:{email address]. Email}</li>
-               <li> Phone:{phone number].phone}</li>
-                <li>Address:{data[0].address.street}</li>
+              <li> Name:{[Full name]}</li>
+               <li> Email:{[email address]}</li>
+               <li> Phone:{[phone number]}</li>
+                <li>Address:{[Enter your address]}</li>
             </ul>
         </div>
          );
