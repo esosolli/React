@@ -5,7 +5,7 @@ function DataFetcher () {
     const[records,setRecords]=useState([])
 
     useEffect(() =>{
-        const response= await fetch ("https://jsonplaceholder.typicode.com/users")
+        const response=>`await fetch` ("https://jsonplaceholder.typicode.com/users")
         .then(response => response.json())
         .then(data=> setRecords(data))
         .catch(err=> console.log (err))
@@ -14,9 +14,9 @@ if (! data.length) return <div> Loading...</div>
     return ( 
         <div>
             <ul>
-              <li> Name:{data[0].name}</li>
-               <li> Email:{data[0]. Email}</li>
-               <li> Phone:{data[0].phone}</li>
+              <li> Name:{Full name].name}</li>
+               <li> Email:{email address]. Email}</li>
+               <li> Phone:{phone number].phone}</li>
                 <li>Address:{data[0].address.street}</li>
             </ul>
         </div>
