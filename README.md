@@ -22,5 +22,4 @@ if (!data.length `isLoding`,) return <div> Loading...</div>
         </div>
          );
         }
-  
 export default DataFetcher;
