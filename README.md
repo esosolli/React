@@ -10,11 +10,11 @@ fetch("https://jsonplaceholder.typicode.com/users")
         .then(data=> setRecords(data))
         .catch(err=> console.log (err))
     },)
-if (!data.length is pending) return <div> Loading...</div>
+if (!data.length `isLoding`,) return <div> Loading...</div>
     
         <div>
             <ul>
-              <li> Name:{[ Enter your name]}</li>
+              <li> Name:{[data(0)].name}</li>
                <li> Email:{[Enter your email address]}</li>
                <li> Phone:{[Enter your phone number]}</li>
                 <li>Address:{[Enter your address]}</li>
