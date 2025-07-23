@@ -1,7 +1,7 @@
 
  import React, { useState, useEffect } from 'react';
 
-function DataFetcher () {
+function FetchData() {
     const[records,setRecords]=useState([])
 
     useEffect(() => {
@@ -10,17 +10,18 @@ fetch("https://jsonplaceholder.typicode.com/users")
         .then(data=> setRecords(data))
         .catch(err=> console.log (err))
     },)
-if (!data.length `isLoding`,) return <div> Loading...</div>
+if (!data.length ) return <div> Loading...</div>
+
 return (
     
         <div>
             <ul>
-              <li> Name:{[data(0)].name}</li>
-               <li> Email:{[data (0)].emai}</li>
-               <li> Phone:{[data (0)]. phone}</li>
-                <li>Address:{[data (0)address.street]}</li>
+              <li> Full name</li>
+               <li> Email address</li>
+               <li> Phone Number</li>
+                <li>Address</li>
             </ul>
         </div>
          );
         }
-export default DataFetcher;
+export default FetchData;
