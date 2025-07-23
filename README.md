@@ -4,12 +4,14 @@
 function DataFetcher () {
     const[records,setRecords]=useState([])
 
-    useEffect(() =>{
-        const response= await fetch ("https://jsonplaceholder.typicode.com/users")
-        .then(response => response.json())
-        .then(data=> setRecords(data))
-        .catch(err=> console.log (err))
-    },
+useEffect(() => {"\n const fetchData = async () => {\n try {\n const response = await fetch(\"https://jsonplaceholder.typicode.com/users\");\n          
+const data = await response.json();\n               setRecords(data);\n"}
+ catch (err) {"\n console.log(err);\n"}
+  };
+  fetchData();
+}, []);
+
+
 if (! data.length) return <div> Loading...</div>
     return ( 
         <div>
