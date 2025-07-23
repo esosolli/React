@@ -15,9 +15,9 @@ if (!data.length `isLoding`,) return <div> Loading...</div>
         <div>
             <ul>
               <li> Name:{[data(0)].name}</li>
-               <li> Email:{[Enter your email address]}</li>
-               <li> Phone:{[Enter your phone number]}</li>
-                <li>Address:{[Enter your address]}</li>
+               <li> Email:{[data (0)].emai}</li>
+               <li> Phone:{[data (0)]. phone}</li>
+                <li>Address:{[data (0)address.street]}</li>
             </ul>
         </div>
          );
