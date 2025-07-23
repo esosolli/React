@@ -10,7 +10,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
         .then(data=> setRecords(data))
         .catch(err=> console.log (err))
     },)
-if (! data.length) return <div> Loading...</div>
+if (! pending) return <div> Loading...</div>
     
         <div>
             <ul>
