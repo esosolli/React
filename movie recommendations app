@@ -1,0 +1,45 @@
+import {useState} from './react';
+import axios from 'axios';
+import './App.css';
+
+  id: Number;
+  title: String;
+  poster_path: String;
+  release_date: String;
+
+function App() {
+  
+  const[movies, seMovie]= useState <{seMovies}
+  const apikey ="a2006311928939b35613c28405038c87";
+  const popular ="https://api.themoviedb.org/3/movie/popular";
+
+  }
+  
+  useEffect(() => {
+    fetchdata();
+  }, []);
+
+  const fetchdata = () => {
+    axios.get( `${popular}?api_key=${apiKey}`).
+    then((response) => {  
+      const result = response.data.results;
+     seMovies(result);
+      });
+     };
+    
+  return ( 
+<div className="App">
+      
+  {movies.map((items)=>( 
+    <div className="movieContainer" keys= {items.id}>
+    <h2> {items.title} </h2>
+    {items.poster_path && (
+      <img src={`https://image.tmdb.org/t/p/w200${items.poster_path}`}alt={`$
+        {items.title} poster`}/>
+    )}
+<p> {items.release_date} </p>
+</div>
+  ))}
+   </div>
+   );
+export default App;
