@@ -1,27 +1,45 @@
+import {useState} from './react';
+import axios from 'axios';
+import './App.css';
 
- import React, { useState, useEffect } from 'react';
+  id: Number;
+  title: String;
+  poster_path: String;
+  release_date: String;
 
-function FetchData() {
-    const[records,setRecords]=useState([])
+function App() {
 
-    useEffect(() => {
-fetch("https://jsonplaceholder.typicode.com/users")
-        .then(response => response.json())
-        .then(data=> setRecords(data))
-        .catch(err=> console.log (err))
-    },)
-if (!data.length ) return <div> Loading...</div>
+  const[movies, seMovie]= useState <{seMovies}
+  const apikey ="a2006311928939b35613c28405038c87";
+  const popular ="https://api.themoviedb.org/3/movie/popular";
 
-return (
-    
-        <div>
-            <ul>
-              <li> Full name</li>
-               <li> Email address</li>
-               <li> Phone Number</li>
-                <li>Address</li>
-            </ul>
-        </div>
-         );
-        }
-export default FetchData;
+  }
+
+  useEffect(() => {
+    fetchdata();
+  }, []);
+
+  const fetchdata = () => {
+    axios.get( `${popular}?api_key=${apiKey}`).
+    then((response) => {  
+      const result = response.data.results;
+     seMovies(result);
+      });
+     };
+
+  return ( 
+<div className="App">
+
+  {movies.map((items)=>( 
+    <div className="movieContainer" keys= {items.id}>
+    <h2> {items.title} </h2>
+    {items.poster_path && (
+      <img src={`https://image.tmdb.org/t/p/w200${items.poster_path}`}alt={`$
+        {items.title} poster`}/>
+    )}
+<p> {items.release_date} </p>
+</div>
+  ))}
+   </div>
+   );
+export default App;
