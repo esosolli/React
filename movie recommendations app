@@ -10,8 +10,8 @@ import './App.css';
 function App() {
   
   const[movies, seMovie]= useState <{seMovies}
-  const apikey ="a2006311928939b35613c28405038c87";
-  const popular ="https://api.themoviedb.org/3/movie/popular";
+  const apikey =`a2006311928939b35613c28405038c87`;
+  const popular =`https://api.themoviedb.org/3/movie/popular`;
 
   }
   
@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   const fetchdata = () => {
-    axios.get( `${popular}?api_key=${apiKey}`).
+    axios.get(`${popular}?api_key=${apiKey}`).
     then((response) => {  
       const result = response.data.results;
      seMovies(result);
