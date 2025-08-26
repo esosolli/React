@@ -9,7 +9,7 @@ import './App.css';
 
 function App() {
 
-  const[movies, seMovie]= useState <{seMovies}
+  `const [movies, setMovies]= useState ([])`;.
   const apikey ="a2006311928939b35613c28405038c87";
   const popular ="https://api.themoviedb.org/3/movie/popular";
 
@@ -28,10 +28,7 @@ function App() {
      };
 
   return ( 
-<div className="App">
-
-  {movies.map((items)=>( 
-    <div className="movieContainer" keys= {items.id}>
+`key` in `<div className="movieContainer" keys= {"items.id"}>`.
     <h2> {items.title} </h2>
     {items.poster_path && (
       <img src={`https://image.tmdb.org/t/p/w200${items.poster_path}`}alt={`$
